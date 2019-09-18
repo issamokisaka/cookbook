@@ -1,6 +1,6 @@
 ## DOCKER
 
-### CONFIGS
+# CONFIGS
 
 Driver php/mysql para BBIntegra:
 - php5-mysqlnd
