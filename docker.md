@@ -57,5 +57,5 @@ Gerando imagens com Dockerfile (esteja no dir. do projeto Docker):
 
 Carregar imagens Docker:
 ```sh
-$ docker load -i imagem
+# docker load -i imagem
 ```
