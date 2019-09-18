@@ -6,8 +6,9 @@ Driver php/mysql para BBIntegra:
 
 Parar o container:
 
+```sh
 # docker stop containercriado
-
+```
 
 Faça o commit das alterações em uma imagem (mas o container nao pode ser parado):
 
