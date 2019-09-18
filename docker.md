@@ -16,9 +16,11 @@ Parar o container:
 
 Faça o commit das alterações em uma imagem (mas o container nao pode ser parado):
 
+```sh
 # docker commit -a "Your Name <youremail@email.com>" -m "nome of image" CONTAINER_ID nome_criador/nome_imagem:versao
 
 # docker commit CONTAINER_ID NOME_CRIADOR/NOME_IMAGEM:VERSAO
+```
 
 
 Colocar TAG em uma imagem:
