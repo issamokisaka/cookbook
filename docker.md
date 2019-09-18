@@ -24,33 +24,38 @@ Faça o commit das alterações em uma imagem (mas o container nao pode ser para
 
 
 Colocar TAG em uma imagem:
+```sh
 # docker tag NOME_IMAGEM:VERSAO NOME_IMAGEM:latest
-
+```
 
 Remove do sistema qualquer imagem de conteiner docker usado ou nao
-
+```sh
 # docker system prune -a
-
+```
 
 Exportar imagem para arquivo:
-
+```sh
 # docker save NOME_CRIADOR/NOME_PROJETO:VERSAO > IMAGEM.tar
-
+```
 
 Acessando um container:
+```sh
 # docker exec -it CONTAINER_ID /bin/bash
-
+```
 
 Executar container:
 
+```sh
 $ docker run -d -it --name devtest --mount type=bind,source="$(pwd)"/target,target=/app \
   nginx:latest
-
+```
 
 Gerando imagens com Dockerfile (esteja no dir. do projeto Docker):
-
-docker build -t minhaimagem:VERSAO .
-
+```sh
+# docker build -t minhaimagem:VERSAO .
+```
 
 Carregar imagens Docker:
+```sh
 $ docker load -i imagem
+```
