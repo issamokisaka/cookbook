@@ -1,0 +1,64 @@
+UPDATE `BASE`.`TABELA`
+SET `nome_campo` = REPLACE(nome_campo, 'string_de_pasquisa', 'string_substituta')
+-- WHERE `integra_externo`.`id_integra_externo` = 1;
+
+
+update one table from another table:
+
+- UPDATE desenv_economia_local_mongodb AS d
+  RIGHT JOIN g100_mun_2018 AS g
+  ON d.cod_ibge6_ifdm = g.cd_ibge_mun
+  SET d.indice_g100 = g.indice_g100
+
+
+
+HIVE (rename table):
+ > alter table_name finbra rename to new_table_name;
+
+
+# Linha para ser adicionada em estrutura da tabela no MYSQL ##########
+
+DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ENGINE = MYISAM
+
+######################################################################
+
+
+SELECT UF, sg_uf, regiao,
+
+COUNT(CASE
+        WHEN (TRIM(SemiArido) LIKE 'Sim')
+          THEN 1
+      END) AS SemiAridoSim,
+
+COUNT(CASE
+        WHEN (TRIM(SemiArido) LIKE 'Não')
+          THEN 1
+      END) AS SemiAridoNao,
+
+COUNT(CASE
+        WHEN (TRIM(predomina_pop) LIKE 'Urbana')
+          THEN 1
+      END) AS predomina_pop_urbana,
+
+COUNT(CASE
+        WHEN (TRIM(predomina_pop) LIKE 'Rural')
+          THEN 1
+      END) AS predomina_pop_rural
+
+FROM `territorio`
+
+GROUP BY UF
+
+ORDER BY `UF`
+
+
+SELECT `TS_GEA`, `TS_RTC`, max(`TS_RTC_COMPLETO`) AS `TS_RTC_COMPLETO_MAIOR`, `STATUS_RTC`,
+`CD_UOR_CC`, `NR_CC`, `dados__porcentagem`, `dados__titulo`, `dados__valorDesconto`,
+`dados__valorInicial`, `dados__prd`, `dados__pkt`, `dados__subPrd`, `dados__cdTfa`,
+`dados__dtIni`, `dados__dtFim`
+
+FROM `Estorno`
+
+GROUP BY `CD_UOR_CC`, `NR_CC`
+
+ORDER BY `CD_UOR_CC`, `NR_CC`
