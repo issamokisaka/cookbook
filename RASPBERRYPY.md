@@ -22,6 +22,6 @@ network={
 
 
 Queimar imagens Raspbian:
-'''
+```sh
 # dd bs=4M if=2019-09-26-raspbian-buster.img of=/dev/sdX conv=fsync
-'''
+```sh
