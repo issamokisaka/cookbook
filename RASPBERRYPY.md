@@ -1,5 +1,6 @@
 /etc/network/interfaces:
 
+```sh
 allow-hotplug eth0
 iface eth0 inet dhcp
         #address 192.168.15.254
@@ -7,7 +8,7 @@ iface eth0 inet dhcp
         #gateway 192.168.15.1
         wpa-driver wired
         wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
-
+```
 
 
 /etc/wpa_supplicant/wpa_supplicant.conf:
