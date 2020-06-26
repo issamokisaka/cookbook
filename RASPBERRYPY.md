@@ -13,16 +13,18 @@ iface eth0 inet dhcp
 
 /etc/wpa_supplicant/wpa_supplicant.conf:
 
+```sh
 network={
         key_mgmt=IEEE8021X
         eap=PEAP
         phase2="auth=MSCHAPV2"
-        identity="bb-linux"
-        password="BBSA@123"
+        identity="server"
+        password="pass"
 }
-
+```
 
 Queimar imagens Raspbian:
+
 ```sh
 # dd bs=4M if=2019-09-26-raspbian-buster.img of=/dev/sdX conv=fsync
 ```
