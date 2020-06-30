@@ -59,3 +59,5 @@ Retirar pipe  do final da linha:
 ```sh
 sed -i 's/|$//'  arquivo.csv   
 ```
+
+OBS:> Em sed, pesquisa não pode conter "&", "/" , "'", "!" , """ e ","
