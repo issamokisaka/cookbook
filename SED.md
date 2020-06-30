@@ -38,3 +38,24 @@ CTRL+V CTRL+M aparece o caracter ^M:
 ```sh
 sed 's/^M//g' file_input.txt                                                                                            
 ```
+
+
+REMOVER LINHAS QUE COMEÇAM COM DETERMINADA STRING "+---":
+```sh
+sed -i 's/^+---.*$//'  arquivo.csv
+```
+
+Remover linhas em branco:
+```sh
+sed -i '/^$/d'  arquivo.csv
+```
+
+Retirar pipe do inicio da linha:
+```sh
+sed -i 's/^|//'  arquivo.csv
+```
+
+Retirar pipe  do final da linha:
+```sh
+sed -i 's/|$//'  arquivo.csv   
+```
