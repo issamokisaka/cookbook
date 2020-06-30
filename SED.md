@@ -22,3 +22,19 @@ sed 's/\// A=/5' teste.txt
 
 /fdsafdas/fdsa/fdsa/fdsa A=teste
 ```
+
+
+DELETAR TAGS HTML
+```sh
+sed 's/<[^>]*>//g' saida1.txt
+```
+
+REMOVER Linhas em branco:
+```sh
+sed '/^$/d' saida.txt
+```
+
+CTRL+V CTRL+M aparece o caracter ^M:
+```sh
+sed 's/^M//g' file_input.txt                                                                                            
+```
