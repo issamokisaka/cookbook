@@ -23,6 +23,8 @@ network={
 }
 ```
 
+
+
 Queimar imagens Raspbian:
 
 ```sh
