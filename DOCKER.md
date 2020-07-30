@@ -8,12 +8,12 @@ Remove todas as instâncias
 docker rm $(docker ps -a -q)
 ```
 
-Para todas as imagens
+Apaga todas as imagens
 ```sh
 docker image rm $(docker image ls -a -q)
 ```
 
-Para todos os volumes
+Apaga todos os volumes
 ```sh
 docker volume prune
 ```
